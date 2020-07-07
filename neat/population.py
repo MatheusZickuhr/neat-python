@@ -132,7 +132,6 @@ class Population(object):
 
             self.generation += 1
 
-        if self.config.no_fitness_termination:
-            self.reporters.found_solution(self.config, self.generation, self.best_genome)
+        self.reporters.found_solution(self.config, self.generation, self.best_genome)
 
         return self.best_genome
